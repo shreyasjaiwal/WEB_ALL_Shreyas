@@ -26,10 +26,15 @@ input createUserInput{
 name:String!
 username:String!
 age:Int!
-nationality:Nationality=BRAZIL
+nationality:Nationality=BRAZIL 
+}
+input updateUserInput{
+id:ID!
+newUsernamw:String!
 }
 type Mutation{
-createUser(input:createUserInput!):User!
+createUser(input:createUserInput!):User
+updateUser(input:updateUserInput!):User
 
 }
 enum Nationality{
@@ -39,5 +44,12 @@ INDIA
 GERMANY
 CHILE
 }
+type usersSuccessfulrResult{
+  users:[User!]!
+}
+type usersErrorResult{
+  message:String!
+}
+union userResults=usersSuccessfulrResult | UsersErrorResult
 `
 module.exports = { typeDefs }
