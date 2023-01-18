@@ -1,5 +1,7 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap'); 
 .App {
   text-align: center;
+  font-family:  'Poppins', sans-serif;
 }
 
 .App-logo {
@@ -35,4 +37,10 @@
   to {
     transform: rotate(360deg);
   }
+}.btn{
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding: 12px;
+  font-size: 20px;
 }
